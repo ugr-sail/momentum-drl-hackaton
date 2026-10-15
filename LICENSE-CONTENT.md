@@ -1,7 +1,6 @@
 # Licencia del contenido didáctico
 
 © 2026 Miguel Molina-Solana, Juan Gómez-Romero, Ahmed Brek-Prieto y Antonio Manjavacas-Lucas.
-Los notebooks de `workspace/repaso/` (fase 1 del curso): © 2026 Miguel Molina-Solana.
 
 Los notebooks de la carpeta `workspace/` y la documentación de este repositorio se distribuyen bajo la licencia
 **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**.
