@@ -4,7 +4,7 @@
 
 Material y entorno de trabajo para el **hackatón presencial** de MOMENTUM, centrado en **aprendizaje por refuerzo profundo** (DRL). Entrenarás agentes que conducen en el simulador [`highway-env`](https://highway-env.farama.org/) con [Gymnasium](https://gymnasium.farama.org/), [Stable-Baselines3](https://stable-baselines3.readthedocs.io/) y [Optuna](https://optuna.org/).
 
-**Requisitos previos:** la fase 1 del curso (los webinarios de Python). Sus notebooks están en [`workspace/repaso/`](workspace/repaso/) por si quieres repasar.
+**Requisitos previos:** la fase 1 del curso (los webinarios de Python). Sus notebooks están en [`workspace/repaso/`](workspace/repaso/) por si quieres repasar (incluidos los de RL con Stable-Baselines3).
 
 ## Elige cómo trabajar
 
@@ -101,7 +101,7 @@ También puedes abrir la carpeta con VS Code (extensiones *Python* y *Jupyter*) 
 | [`train`](workspace/train.ipynb) | Entrenar tus agentes. Guarda el mejor en `workspace/agentes/` |
 | [`test`](workspace/test.ipynb) | Evaluar un agente guardado con las mismas condiciones para todos los equipos |
 
-**Repaso de la fase 1**, en [`workspace/repaso/`](workspace/repaso/): los notebooks de Python de los webinarios, con sus soluciones.
+**Repaso de la fase 1**, en [`workspace/repaso/`](workspace/repaso/): los notebooks de Python de los webinarios, con sus soluciones, y los de aprendizaje por refuerzo con Stable-Baselines3 en `workspace/repaso/rl/stable-baselines/`.
 
 ## Cómo trabajar con los notebooks
 

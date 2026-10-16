@@ -8,7 +8,7 @@ ipykernel
 ipywidgets
 jupyter
 optuna
-gymnasium
+gymnasium[classic-control,toy-text]
 highway-env
 stable-baselines3[extras]
 
