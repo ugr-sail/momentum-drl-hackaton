@@ -8,14 +8,8 @@ ipykernel
 ipywidgets
 jupyter
 optuna
-gymnasium[classic-control,toy-text]
+gymnasium
 highway-env
 stable-baselines3[extras]
-
-# Las de la fase 1, para los notebooks de workspace/repaso/
 numpy
-pandas
 matplotlib
-seaborn
-scikit-learn
-requests

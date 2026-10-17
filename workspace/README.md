@@ -12,7 +12,3 @@ En el directorio `ejemplos/` están disponibles los siguientes _notebooks_:
 
 - `test.ipynb`: contiene el código empleado para ejecutar los mejores agentes obtenidos.
 - `train.ipynb`: contiene el código empleado para entrenar los agentes entregados.
-
-## Repaso de la fase 1
-
-En el directorio `repaso/` están los _notebooks_ de Python de los webinarios (fase 1 del curso), con sus soluciones en `repaso/soluciones/`.
