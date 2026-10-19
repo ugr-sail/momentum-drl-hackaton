@@ -2,7 +2,7 @@
   // Entorno del hackatón (fase 2) para VS Code (Dev Containers) y GitHub Codespaces
   // Autoría: SAIL-UGR research group
   "name": "MOMENTUM · Hackatón de DRL (by SAIL-UGR research group)",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/python:3-3.13-trixie",
   "runArgs": ["--label", "org.opencontainers.image.authors=SAIL-UGR research group"],
   "postCreateCommand": "pip install -r requirements.txt && python -m ipykernel install --user --name curso-python --display-name \"Python (curso)\"",
   "customizations": {

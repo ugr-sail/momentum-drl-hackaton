@@ -12,7 +12,7 @@ Material y entorno de trabajo para el **hackatón presencial** de MOMENTUM, cent
 |---|---|---|
 | [**A · Docker**](#opción-a--docker-recomendada) | Docker instalado | Quieres el entorno listo, idéntico al del aula |
 | [**B · GitHub Codespaces**](#opción-b--github-codespaces) | Una cuenta de GitHub | No puedes o no quieres instalar nada |
-| [**C · Tu propio Python**](#opción-c--tu-propio-python) | Python 3.10 o superior | Ya tienes Python y prefieres tu editor |
+| [**C · Tu propio Python**](#opción-c--tu-propio-python) | Python 3.12 o superior (no en Mac con Intel) | Ya tienes Python y prefieres tu editor |
 
 Las tres opciones usan exactamente los mismos notebooks.
 
@@ -71,6 +71,8 @@ Pulsa el botón (o *Code → Codespaces → Create codespace* en esta página). 
 Para recuperar un notebook original, ejecuta `git restore workspace/` en la terminal.
 
 ## Opción C · Tu propio Python
+
+> **¿Tienes un Mac con procesador Intel?** Esta opción no te funcionará: PyTorch dejó de publicar versiones para estos equipos hace tiempo (la última es de 2024). Usa la [opción A](#opción-a--docker-recomendada) (Docker) o la [B](#opción-b--github-codespaces) (Codespaces).
 
 Descarga este repositorio (**Code → Download ZIP**, o `git clone https://github.com/ugr-sail/momentum-drl-hackaton`) y, dentro de la carpeta:
 
