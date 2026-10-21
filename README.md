@@ -103,6 +103,44 @@ También puedes abrir la carpeta con VS Code (extensiones *Python* y *Jupyter*) 
 | [`train`](workspace/train.ipynb) | Entrenar tus agentes. Guarda el mejor en `workspace/agentes/` |
 | [`test`](workspace/test.ipynb) | Evaluar un agente guardado con las mismas condiciones para todos los equipos |
 
+## Cómo entregar tu agente
+
+Al final del hackatón, cada equipo entrega **una carpeta con el nombre del equipo**, que es el que aparecerá en la clasificación:
+
+```text
+<nombre-del-equipo>/
+├── best_model.zip   tu mejor agente: workspace/agentes/<EXPERIMENT_NAME>/best_model.zip
+└── wrappers.py      solo si usaste wrappers
+```
+
+Si no usaste wrappers, basta con `best_model.zip`. Si los usaste, `wrappers.py` tiene que definir las clases de tus wrappers y una función `aplicar_wrappers(env)` que los aplique **con los mismos parámetros y en el mismo orden que en `train.ipynb`**. Por ejemplo, con el wrapper de acciones de [`03_wrappers`](workspace/ejemplos/03_wrappers.ipynb):
+
+```python
+import gymnasium as gym
+
+
+class NonChangeWrapper(gym.ActionWrapper):
+    def action(self, action):
+        if action == 0 or action == 2:
+            action = 1
+        return action
+
+
+def aplicar_wrappers(env):
+    env = NonChangeWrapper(env)
+    # env = OtroWrapper(env)  # el resto, en el mismo orden que en make_env()
+    return env
+```
+
+Antes de entregar, comprueba que el agente se carga y se evalúa sin errores en `test.ipynb` con esos mismos wrappers. Ten en cuenta que:
+
+- **Todos los equipos se evalúan igual que en `test.ipynb`**: `highway-v0`, 20 episodios, las mismas semillas y `deterministic=True`.
+- **La clasificación usa la recompensa original del entorno**, la de `highway-v0` sin modificar. Un wrapper de recompensa sirve para entrenar, pero no cambia tu puntuación: si usas uno, la recompensa de tu `test.ipynb` no coincidirá con la oficial. A igual recompensa, gana quien tenga menos colisiones.
+- **El algoritmo (DQN, PPO o A2C) se detecta en el propio `best_model.zip`.** Si no se reconoce, se os pedirá un `algoritmo.txt` que solo diga el nombre.
+- **Si algún wrapper usa estadísticas aprendidas** (por ejemplo, de normalización), guárdalas en un archivo dentro de la misma carpeta, cárgalas en `aplicar_wrappers` (la ruta de la carpeta es `pathlib.Path(__file__).parent`) y no las sigas actualizando durante la evaluación.
+
+Si trabajas con Docker, descarga la carpeta desde el explorador de archivos (clic derecho → *Download*). El equipo formador os dirá cómo hacerle llegar la carpeta.
+
 ## Cómo trabajar con los notebooks
 
 - Ejecuta una celda con **Mayús + Intro**. Ejecuta las celdas **en orden**, de arriba abajo.

@@ -12,3 +12,5 @@ En el directorio `ejemplos/` están disponibles los siguientes _notebooks_:
 
 - `test.ipynb`: contiene el código empleado para ejecutar los mejores agentes obtenidos.
 - `train.ipynb`: contiene el código empleado para entrenar los agentes entregados.
+
+Al final de `test.ipynb` se explica qué hay que entregar: una carpeta con el nombre del equipo, el `best_model.zip` y, si se usaron wrappers, un `wrappers.py`.
